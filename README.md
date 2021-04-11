@@ -1,5 +1,7 @@
 Learning rust with a topcoder challenge
 
+https://github.com/pepsighan/basic-auth-raw/blob/master/src/lib.rs
+
 ## [Topcoder challenge](https://www.topcoder.com/challenges/de6ed3dc-7afc-40e6-a2df-64e027f3221e)
 
 ### Challenge Objectives
