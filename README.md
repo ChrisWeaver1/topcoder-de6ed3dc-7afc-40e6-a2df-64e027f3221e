@@ -1,6 +1,6 @@
-# [Topcoder challenge](https://www.topcoder.com/challenges/de6ed3dc-7afc-40e6-a2df-64e027f3221e)
-
 Learning rust with a topcoder challenge
+
+## [Topcoder challenge](https://www.topcoder.com/challenges/de6ed3dc-7afc-40e6-a2df-64e027f3221e)
 
 ### Challenge Objectives
 
