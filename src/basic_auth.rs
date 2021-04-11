@@ -14,13 +14,15 @@ pub struct BasicAuth {
 }
 
 // implement FromRequest from rocket on our BasicAuth struct
+// 'a and 'r are lifetime types, trying not to worry about these at the moment because it seems like a giant 
+// rabbit hole, but they seem like generic passthrough values
 impl<'a, 'r> FromRequest<'a, 'r> for BasicAuth {
     type Error = ();
 
     fn from_request(request: &Request) -> Outcome<Self, (Status, <Self as FromRequest<'a, 'r>>::Error), ()> {
         
         // get Authorization header value
-        // should look something like "basic owroioerw=="
+        // should look something like "basic owod4ioe66w=="
         let auth_header = request.headers().get_one("Authorization");
 
         // Unwrap & check option value
