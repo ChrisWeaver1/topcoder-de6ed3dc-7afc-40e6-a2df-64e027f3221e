@@ -7,6 +7,7 @@
 mod routes;
 mod catchers;
 mod basic_auth;
+mod survey_form;
 
 use rocket_contrib::templates::Template;
 

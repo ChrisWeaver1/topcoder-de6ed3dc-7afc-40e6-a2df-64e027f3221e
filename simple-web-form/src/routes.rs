@@ -1,8 +1,9 @@
 use std::collections::HashMap;
 use rocket_contrib::templates::Template;
-use rocket::request::{FromForm, Form, FormItems};
+use rocket::request::{Form};
 
 use crate::basic_auth;
+use crate::survey_form;
 
 #[get("/")]
 pub fn index(auth: basic_auth::BasicAuth) -> Template {
@@ -11,19 +12,10 @@ pub fn index(auth: basic_auth::BasicAuth) -> Template {
     return Template::render("index", context);
 }
 
-#[derive(FromForm)]
-pub struct SurveyForm {
-    name: String,
-    age: String,
-    gender: String,
-    favoriteFruit: String,
-}
-
 #[post("/survey", format="application/x-www-form-urlencoded", data="<form>")]
-pub fn survey(auth: basic_auth::BasicAuth, form: Form<SurveyForm>) -> Template {
-    let mut context: HashMap<&str, &str> = HashMap::new();
-    context.insert("name", &auth.username);
+pub fn survey(_auth: basic_auth::BasicAuth, form: Form<survey_form::SurveyForm>) -> Template {
+    let context: HashMap<&str, &str> = HashMap::new();
 
-    println!("name: {}, age: {}, gender: {}, fruit: {}", form.name, form.age, form.gender, form.favoriteFruit);
+    println!("name: {:?}, age: {:?}, gender: {:?}, fruit: {}", form.name.0, form.age, form.gender, form.fruit);
     return Template::render("survey", context);
 }
