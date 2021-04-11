@@ -14,7 +14,7 @@ fn main() {
     rocket::ignite()
         .attach(Template::fairing())
         .register(catchers![catchers::catch_401])
-        .mount("/", routes![routes::index])
+        .mount("/", routes![routes::index, routes::survey])
         .launch();
 }
 

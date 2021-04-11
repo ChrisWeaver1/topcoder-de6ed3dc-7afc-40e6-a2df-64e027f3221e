@@ -7,3 +7,23 @@ write_timeout = 5
 log = "normal"
 limits = { forms = 32768 }
 template_dir = "src/templates"
+
+[staging]
+address = "0.0.0.0"
+port = 8080
+keep_alive = 5
+read_timeout = 5
+write_timeout = 5
+log = "normal"
+limits = { forms = 32768 }
+template_dir = "src/templates"
+
+[production]
+address = "0.0.0.0"
+port = 8080
+keep_alive = 5
+read_timeout = 5
+write_timeout = 5
+log = "critical"
+limits = { forms = 32768 }
+template_dir = "src/templates"

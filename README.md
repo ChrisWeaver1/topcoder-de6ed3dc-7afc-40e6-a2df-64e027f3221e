@@ -15,9 +15,10 @@ This project involves an automated tester. The idea is to have members submit so
 ### Technology Stack
 
 You will be creating both a front end and back end for the app. There is no restriction on the tech stack used for both front and back. No database is needed for this app 
-Individual requirements
 
-### Create a user interface in a language of your choice
+### Individual requirements
+
+Create a user interface in a language of your choice
 
 - We’ll walk you through our expectation of how your application should work and you need to implement it to meet our expectations.
 - The web application needs to launch on localhost at port 8080
